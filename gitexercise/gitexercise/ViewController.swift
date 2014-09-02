@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        presentViewController(alert, animated: true) {
+        presentViewController(self.alert, animated: true) {
             () -> Void in
             println("Wowza!")
         }
@@ -40,6 +40,12 @@ class ViewController: UIViewController {
         self.alert = alertController
     }
 
+    @IBAction func showAlert(sender: AnyObject) {
+        presentViewController(self.alert, animated: true) {
+            () -> Void in
+            println("Another alert shown!")
+        }
+    }
 
 }
 

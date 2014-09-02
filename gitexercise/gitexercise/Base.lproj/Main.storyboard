@@ -25,6 +25,21 @@
                                     <action selector="showAlert:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oSW-UG-9g1"/>
                                 </connections>
                             </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0Z4-PN-F2s">
+                                <rect key="frame" x="143" y="111" width="94" height="29"/>
+                            </stepper>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-Mw-Wbf">
+                                <rect key="frame" x="102" y="385" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="431372334.87174499">
+                                    <!--2014-09-02 17:38:54 +0000-->
+                                </date>
+                            </datePicker>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0f3-l5-Wuh">
+                                <rect key="frame" x="443" y="157" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XlQ-oQ-Lep">
+                                <rect key="frame" x="177" y="253" width="150" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

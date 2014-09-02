@@ -9,17 +9,43 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var alert : UIAlertController?
                             
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.generateAlert()
+
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        presentViewController(self.alert, animated: true) {
+            () -> Void in
+            println("Wowza!")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func generateAlert() {
+        let alertController = UIAlertController(title: "Alerted!", message: "This is going to make a commit suck!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        var done = UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil)
+        alertController.addAction(done)
+        
+        self.alert = alertController
+    }
 
+    @IBAction func showAlert(sender: AnyObject) {
+        presentViewController(self.alert, animated: true) {
+            () -> Void in
+            println("Another alert shown!")
+        }
+    }
 
 }
 

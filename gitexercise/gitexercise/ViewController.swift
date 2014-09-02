@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         presentViewController(self.alert, animated: true) {
             () -> Void in
-            println("Yoinks!")
         }
         
     }

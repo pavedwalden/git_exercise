@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         }
         
     }
-
     
     func generateAlert() {
         let alertController = UIAlertController(title: "Alerted!", message: "This is going to make a commit suck!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -48,6 +47,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.identifier == "ShouldDoIt" {
+            println("Hi!")
+        }
     }
 
 }

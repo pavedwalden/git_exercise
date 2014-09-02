@@ -17,6 +17,15 @@ class ViewController: UIViewController {
         self.generateAlert()
 
     }
+    
+    @IBAction func showAlert(sender: AnyObject) {
+        presentViewController(self.alert, animated: true) {
+            () -> Void in
+            println("Another alert shown!")
+        }
+    }
+    
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         presentViewController(self.alert, animated: true) {
@@ -26,10 +35,6 @@ class ViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func generateAlert() {
         let alertController = UIAlertController(title: "Alerted!", message: "This is going to make a commit suck!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -40,11 +45,9 @@ class ViewController: UIViewController {
         self.alert = alertController
     }
 
-    @IBAction func showAlert(sender: AnyObject) {
-        presentViewController(self.alert, animated: true) {
-            () -> Void in
-            println("Another alert shown!")
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
 }

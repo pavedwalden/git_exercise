@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBAction func showAlert(sender: AnyObject) {
         presentViewController(self.alert, animated: true) {
             () -> Void in
-            println("Another alert shown!")
+            println("I didn't like your alert, so I made this one")
         }
     }
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         presentViewController(self.alert, animated: true) {
             () -> Void in
-            println("Wowza!")
+            println("Yoinks!")
         }
         
     }
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 }
